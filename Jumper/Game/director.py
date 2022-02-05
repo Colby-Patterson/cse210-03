@@ -1,6 +1,6 @@
-from game.balloon import Balloon
-from game.word import Word
-from game.terminal_service import TerminalService
+from Game.balloon import Balloon
+from Game.word import Word
+from Game.terminal_service import TerminalService
 
 
 class Director:
