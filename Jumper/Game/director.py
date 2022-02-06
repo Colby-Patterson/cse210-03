@@ -10,7 +10,7 @@ class Director:
         self._is_playing = True
         self._balloon = Balloon()
         self._word = Word()
-        self._termainal_service = TerminalService()
+        self._terminal_service = TerminalService()
 
     def start_game(self):
 
