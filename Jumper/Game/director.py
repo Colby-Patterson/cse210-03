@@ -24,4 +24,4 @@ class Director:
         letter = input('Guess a letter [a-z]: ')
 
     def _do_updates():
-
+        pass
