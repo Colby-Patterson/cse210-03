@@ -1,6 +1,6 @@
-from game.balloon import Balloon
-from game.word import Word
-from game.terminal_service import TerminalService
+from Game.balloon import Balloon
+from Game.word import Word
+from Game.terminal_service import TerminalService
 
 
 class Director:
@@ -10,7 +10,7 @@ class Director:
         self._is_playing = True
         self._balloon = Balloon()
         self._word = Word()
-        self._termainal_service = TerminalService()
+        self._terminal_service = TerminalService()
 
     def start_game(self):
 
@@ -24,4 +24,4 @@ class Director:
         letter = input('Guess a letter [a-z]: ')
 
     def _do_updates():
-
+        pass
