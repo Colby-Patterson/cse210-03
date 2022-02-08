@@ -4,14 +4,14 @@ from Game.word import Word
 class Balloon:
     
 
-  def __int__(self):
+  def __init__(self):
 
     self._tries = 5
     self._guessed_letter = []
     self._is_playing = True
-    self._word_completetion = '_' * len(self.word)
     self._balloon_image = TerminalService()
     self.word = Word()
+    self._word_completetion = '_' * len(self.word)
 
   def check_letters(self):
     print(self._word_completetion)
@@ -25,8 +25,7 @@ class Balloon:
       return True
 
   def status(self):
-    os.system("clear")
-    print(self._balloon_image.display_balloon[self.tries])
+    print(self._balloon_image.display_balloon(self._tries))
     print(self._word_completetion)
 
   

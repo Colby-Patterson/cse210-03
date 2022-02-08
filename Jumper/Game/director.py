@@ -10,21 +10,19 @@ class Director:
         self._is_playing = True
         self._balloon = Balloon()
         self._word = Word()
-        self._termainal_service = TerminalService()
+        self._terminal_service = TerminalService()
 
     def start_game(self):
 
         while self._is_playing:
             self._get_inputs()
-            self._do_updates()
-            self._do_outputs()
+            #self._do_updates()
+            #self._do_outputs()
 
     def _get_inputs(self):
 
         new_balloon = self._balloon.status()
 
-        pass
+    #def _do_updates():
 
-    def _do_updates():
-
-        pass
+        #pass

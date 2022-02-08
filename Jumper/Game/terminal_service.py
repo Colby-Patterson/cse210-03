@@ -1,6 +1,6 @@
 class TerminalService:
 
-    def display_balloon(tries):
+    def display_balloon(self, tries):
         stages = { 0:"""
                         x
                        /|\
