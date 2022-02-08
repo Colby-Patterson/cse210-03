@@ -5,7 +5,7 @@ from Game.terminal_service import TerminalService
 
 class Director:
 
-    def __int__(self):
+    def __init__(self):
 
         self._is_playing = True
         self._balloon = Balloon()
