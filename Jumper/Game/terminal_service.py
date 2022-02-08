@@ -1,14 +1,14 @@
 class TerminalService:
 
     def display_balloon(self, tries):
-        stages = { 0:"""
+        stages = [ """
                         x
                        /|\
                        / \
                      
                      ^^^^^^^
                  """,
-               1:"""
+               """
                        \ /
                         o
                        /|\
@@ -16,7 +16,7 @@ class TerminalService:
                      
                      ^^^^^^^
                    """,
-               2:"""
+               """
                       \   /
                        \ /
                         o
@@ -25,7 +25,7 @@ class TerminalService:
                      
                      ^^^^^^^
                    """,
-               3:"""
+               """
                        ___
                       \   /
                        \ /
@@ -35,7 +35,7 @@ class TerminalService:
                      
                      ^^^^^^^
                    """,
-               4:"""
+               """
                       /___\
                       \   /
                        \ /
@@ -45,7 +45,7 @@ class TerminalService:
                      
                      ^^^^^^^
                    """,
-               5:"""
+               """
                        ___
                       /___\
                       \   /
@@ -55,4 +55,5 @@ class TerminalService:
                        / \
                      
                      ^^^^^^^
-                   """}
+                   """]
+        return stages[tries]
