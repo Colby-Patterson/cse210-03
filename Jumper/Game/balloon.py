@@ -14,13 +14,14 @@ class Balloon:
     self._word_completetion = '_' * len(self._new_word)
 
   def status(self):
-    print(self._balloon_image.display_balloon(self._tries))
+    
     print(self._word_completetion)
+    print(self._balloon_image.display_balloon(self._tries))
 
   
   def play(self):
 
-    while self._is_playing and self._tries > 0:
+    while self._is_playing == True and self._tries > 0:
       
       self.guess = input('Guess a letter [a-z]: ').upper()
 
@@ -45,7 +46,7 @@ class Balloon:
         print('Not a valid guess.')
       print(self._balloon_image.display_balloon(self._tries))
       print(self._word_completetion)
-      
+
     if not self._is_playing:
       print('you win')
     else:
