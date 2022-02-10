@@ -7,7 +7,7 @@ class Word:
         self.word_list = ["Coach", "Apple", "Event", "Index", "Shift"]
 
     def pick_word(self):
-        self.word = random.choice(self.word_list)
+        self.word = random.choice(self.word_list).upper()
         return self.word
 
     # def __len__(self):

@@ -19,20 +19,8 @@ class Director:
 
         while self._is_playing:
             self._get_inputs()
-            # self._do_updates()
-            # self._do_outputs()
 
     def _get_inputs(self):
 
-        new_balloon = self._balloon.status()
+        self._balloon.status()
         self._balloon.play()
-
-
-    # def _do_updates(self):
-
-        
-    #     pass
-
-    # def _do_outputs(self):
-
-    #     pass

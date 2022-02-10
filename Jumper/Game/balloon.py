@@ -10,18 +10,8 @@ class Balloon:
     self._is_playing = True
     self._balloon_image = TerminalService()
     self.word = Word()
-    self._word_completetion = '_' * len(self.word.pick_word())
-
-  def check_letters(self):
-    print(self._word_completetion)
-    for i in range (0,len(self.word)):
-      letter = self.word[i]
-      if self.guess == letter:
-        self._word_completetion[i] = self.guess
-    if '_' not in self._word_completetion:
-      return False
-    else:
-      return True
+    self._new_word = self.word.pick_word()
+    self._word_completetion = '_' * len(self._new_word)
 
   def status(self):
     print(self._balloon_image.display_balloon(self._tries))
@@ -30,14 +20,14 @@ class Balloon:
   
   def play(self):
 
-    while self._is_playing == True and self._tries > 0:
+    while self._is_playing and self._tries > 0:
       
       self.guess = input('Guess a letter [a-z]: ').upper()
 
       if len(self.guess) == 1 and self.guess.isalpha():
         if self.guess in self._guessed_letter:
           print('You already guessed that letter.')
-        elif self.guess not in self.word.pick_word():
+        elif self.guess not in self._new_word:
           print('That letter is not in the word, sorry.')
           self._tries -= 1
           self._guessed_letter.append(self.guess)
@@ -45,7 +35,7 @@ class Balloon:
           print('You guessed a letter!')
           self._guessed_letter.append(self.guess)
           word_as_list = list(self._word_completetion)
-          indices = [i for i, letter in enumerate(self.word.pick_word()) if letter == self.guess]
+          indices = [i for i, letter in enumerate(self._new_word) if letter == self.guess]
           for index in indices:
             word_as_list[index] = self.guess
           self._word_completetion = "".join(word_as_list)
@@ -55,14 +45,8 @@ class Balloon:
         print('Not a valid guess.')
       print(self._balloon_image.display_balloon(self._tries))
       print(self._word_completetion)
-      print('\n')
+      
     if not self._is_playing:
       print('you win')
     else:
       print('sorry try again later.')
-        # for i in range(0,len(self.word)):
-        #   letter = self.word[i]
-        #   if self.guess == letter:
-        #     self._word_completetion[i] = self.guess
-        # if '_' not in self._word_completetion:
-        #   self._is_playing = False

@@ -1,7 +1,7 @@
 class TerminalService:
 
-    def display_balloon(self, tries):
-        stages = [ """
+  def display_balloon(self, tries):
+    stages = [ """
                           x
                          /|\
                          / \
@@ -57,4 +57,4 @@ class TerminalService:
                        ^^^^^^^
                    """
         ]
-        return stages[tries]
+    return stages[tries]
