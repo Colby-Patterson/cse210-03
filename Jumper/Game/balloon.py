@@ -11,11 +11,11 @@ class Balloon:
     self._balloon_image = TerminalService()
     self.word = Word()
     self._new_word = self.word.pick_word()
-    self._word_completetion = '_' * len(self._new_word)
+    self._word_completion = '_' * len(self._new_word)
 
   def status(self):
   
-    print(self._word_completetion)
+    print(self._word_completion)
     print(self._balloon_image.display_balloon(self._tries))
 
   
@@ -35,15 +35,16 @@ class Balloon:
         else:
           print('You guessed a letter!')
           self._guessed_letter.append(self.guess)
-          word_as_list = list(self._word_completetion)
+          word_as_list = list(self._word_completion)
           indices = [i for i, letter in enumerate(self._new_word) if letter == self.guess]
           for index in indices:
             word_as_list[index] = self.guess
-          self._word_completetion = "".join(word_as_list)
-          if '_' not in self._word_completetion:
+          self._word_completion = "".join(word_as_list)
+          if '_' not in self._word_completion:
             self._is_playing = False
       else:
         print('Not a valid guess.')
+<<<<<<< HEAD
       print(self._word_completetion)
       print(self._balloon_image.display_balloon(self._tries))
     
@@ -51,3 +52,7 @@ class Balloon:
       print('you win')
     else:
       print('sorry try again later.')
+=======
+      print(self._word_completion)
+      print(self._balloon_image.display_balloon(self._tries))
+>>>>>>> eacb804298611abb67e69a5984d81cb5b0026129
