@@ -9,6 +9,3 @@ class Word:
     def pick_word(self):
         self.word = random.choice(self.word_list).upper()
         return self.word
-
-    # def __len__(self):
-    #     return len(self.word)

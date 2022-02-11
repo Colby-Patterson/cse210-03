@@ -46,3 +46,8 @@ class Balloon:
         print('Not a valid guess.')
       print(self._word_completetion)
       print(self._balloon_image.display_balloon(self._tries))
+    
+    if self._is_playing == False:
+      print('you win')
+    else:
+      print('sorry try again later.')

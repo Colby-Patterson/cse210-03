@@ -18,16 +18,8 @@ class Director:
     def start_game(self):
 
         self._get_inputs()
-        self._end_game
 
     def _get_inputs(self):
 
         self._balloon.status()
         self._balloon.play()
-
-    def _end_game(self):
-
-        if self._is_playing == False:
-            print('you win')
-        else:
-            print('sorry try again later.')
