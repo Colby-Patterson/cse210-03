@@ -1,8 +1,9 @@
 from Game.terminal_service import TerminalService
 from Game.word import Word
+# This class is the houses the main function for playing the balloon game.
 class Balloon:
     
-
+  # Stores all of the default variables and the lists to call upon later in the code.
   def __init__(self):
 
     self._tries = 5
@@ -13,12 +14,16 @@ class Balloon:
     self._new_word = self.word.pick_word()
     self._word_completetion = '_' * len(self._new_word)
 
+  # Prints out the secret word in _ to let the player know how many letter there are in the word
+  # and print out the balloon picture based on the number of live left
   def status(self):
   
     print(self._word_completetion)
     print(self._balloon_image.display_balloon(self._tries))
 
-  
+  # core of the game, asks the player for a letter and finds out if the letter in in the alphabet,
+  # and if that letter in the secret word and then updated the secret word to display the new word
+  # with the revealed letter.
   def play(self):
 
     while self._is_playing and self._tries > 0:
